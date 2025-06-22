@@ -14,7 +14,7 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - Updated the entire Github Readme document using Markdown lanuguage with yesterday's learning
         - Learned about core IaC concepts ans use cases 
         - Learned about Terraform architecture, workflows and more basics
-        - Spinned up Ec2 machine, configured Security Groups using Terraform
+        - Spun up EC2 machine, configured Security Groups using Terraform
 - [ ] Day 2
 - [ ] Day 3
 - [ ] Day 4
