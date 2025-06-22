@@ -19,7 +19,6 @@ There are several Iac tools available in the market, each serves it's own purpos
 - Deployment Manager (For GCP)
 
 #### What is mean by configuration drift
-When the provisoned infrastructure has unexpected confguration change. 
-'''For eg :  Cloud engineer has enabled Delete on Termination for the production database '''
+When the provisoned infrastructure has unexpected confguration change. `For eg :  Cloud engineer has enabled Delete on Termination for the production database`
 
 If you not noticed the configuration drift then you resources in the infra might go down, which is obviously a big problem. 
