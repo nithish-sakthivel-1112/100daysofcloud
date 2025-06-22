@@ -44,3 +44,18 @@ So how does the terraform request works on high level?
 
 ![Terraform Architecture](Terraform_Architecture.png)
 
+#### Terraform Provisioners
+Provisioners are used to excute the script or commmand in the compute machine after they have created. It is like executing user data script while creating the EC2 instances. 
+
+#### Terraform Providers
+Providers are plugins that allow you to interact with API you want. Eg: AWS,Azure,Kubernetes,Postgres,Github etc
+
+You need a provider to make your terraform configuration file work. 
+
+'terraform init' comand will download all the necessary plugin according to the provider you mentioned in the configuration file. 
+
+    *Tip: If you are working in big complex infrastructure and you wanna know which providers they are using just execute the command 'terraform providers'*
+
+#### Terraform Modules
+
+Terraform modules is used to reduce the amount of code in the configuration and reusablility of code. You can relate it to functions or libraries in the programming languages(Not exactly the same to same but both serves the same purpose)
