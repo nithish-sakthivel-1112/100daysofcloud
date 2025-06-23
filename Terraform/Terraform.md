@@ -59,3 +59,17 @@ You need a provider to make your terraform configuration file work.
 #### Terraform Modules
 
 Terraform modules is used to reduce the amount of code in the configuration and reusablility of code. You can relate it to functions or libraries in the programming languages(Not exactly the same to same but both serves the same purpose)
+
+#### Maintaining Terraform Files
+
+##### Variables 
+Variables are defined by using variable blocks
+``` 
+variable 'demo'{
+    type = string
+    default = "Hello world"
+}
+```
+###### Variable Types
+
+
