@@ -15,7 +15,14 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - Learned about core IaC concepts ans use cases 
         - Learned about Terraform architecture, workflows and more basics
         - Spun up EC2 machine, configured Security Groups using Terraform
-- [ ] Day 2
+- [x] Day 2
+    - Completed Tasks:
+        - Learned about Terraform Variables
+        - Terraform locals,data sources,outputs
+        - How to reference the different variables and blocks in terraform
+        - Programming basics, Python Architecture.
+        - Python: Variables,Data types
+
 - [ ] Day 3
 - [ ] Day 4
 - [ ] Day 5

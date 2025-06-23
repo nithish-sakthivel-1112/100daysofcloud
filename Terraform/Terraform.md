@@ -81,6 +81,65 @@ variable "vpc_name"{
     default = "myvpc"                     #Giving your value
 }
 ```
-Note: Number or integers don't need double quotes, but Terraform automatically converts number and bool values to strings when needed. For example 5 and "5" both are corre
+Note: Number or integers don't need double quotes, but Terraform automatically converts number and bool values to strings when needed. For example 5 and "5" both are correct
+
+###### Variable LISTs
+
+List is what an array is doing in the prograaming language, it is use to store multiple values 
+```
+variable "lists" {
+    type = (string)
+    default = ["Value1", "Value2"]
+}
+```
+###### VARIABLE MAP
+
+Is a Key:Value pair. We use the key to access to the value
+
+```
+variable "mymap" {
+    type = map
+    default = {
+        Key1 = "Value1"
+        Key2 = "Value2"
+    }
+}
+```
+
+###### Outputs
+Basically outputs block will give you the output after you hit 'terraform apply'
+```
+output "vpc_id" {
+    value = "aws_vpc.myvpc.id"
+}
+
+```
+
+If we run a `apply` we can see the next message:
+
+```
+Apply complete!
+Outputs:
+vpcid = vpc-099d9099f5faec2d9
+``` 
+
+###### Local values 
+
+Local values assigns tha name to the expression. Basically we are storing the values in the variables and we call or use multiple times in our configuration file 
+
+```
+locals {
+        my_bike = "Duke250"
+}
+output "my_bike_model" {
+  value = local.my_bike
+}
+```
+
+Note: Above is just an example to understand for people reading this, in real case scenarios we didn't use random variable like bike.etc. remember we are using terraform to automate the cloud infrastructure 
+
+
+###### DataSources
+Data source is used to alow terraform to use the information outside of terraform, means it used information may be another configuration file or modified y functions.
 
 
