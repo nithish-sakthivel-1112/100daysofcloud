@@ -65,11 +65,22 @@ Terraform modules is used to reduce the amount of code in the configuration and 
 ##### Variables 
 Variables are defined by using variable blocks
 ``` 
-variable 'demo'{
+variable "demo"{
     type = string
     default = "Hello world"
 }
 ```
 ###### Variable Types
+
+String,Numbers,Bool,lists,set,map. We can define a default value
+Examples
+```
+variable "vpc_name"{
+    type = string               #defining what kind of variable type you are using
+    description = "Setting a VPC name"  #Description provides an overview for reader why or what variable is defined here 
+    default = "myvpc"      #Giving your value
+}
+```
+Note: Number or integers don't need double quotes, but Terraform automatically converts number and bool values to strings when needed. For example 5 and "5" both are corre
 
 
