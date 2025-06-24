@@ -70,7 +70,7 @@ variable "demo"{
     default = "Hello world"
 }
 ```
-###### Variable Types
+##### Variable Types
 
 String,Numbers,Bool,lists,set,map. We can define a default value
 Examples
@@ -83,7 +83,7 @@ variable "vpc_name"{
 ```
 Note: Number or integers don't need double quotes, but Terraform automatically converts number and bool values to strings when needed. For example 5 and "5" both are correct
 
-###### Variable LISTs
+##### Variable LISTs
 
 List is what an array is doing in the prograaming language, it is use to store multiple values 
 ```
@@ -92,7 +92,7 @@ variable "lists" {
     default = ["Value1", "Value2"]
 }
 ```
-###### VARIABLE MAP
+##### VARIABLE MAP
 
 Is a Key:Value pair. We use the key to access to the value
 
@@ -106,7 +106,7 @@ variable "mymap" {
 }
 ```
 
-###### Outputs
+##### Outputs
 Basically outputs block will give you the output after you hit 'terraform apply'
 ```
 output "vpc_id" {
@@ -123,7 +123,7 @@ Outputs:
 vpcid = vpc-099d9099f5faec2d9
 ``` 
 
-###### Local values 
+##### Local values 
 
 Local values assigns tha name to the expression. Basically we are storing the values in the variables and we call or use multiple times in our configuration file 
 
@@ -139,16 +139,16 @@ output "my_bike_model" {
 Note: Above is just an example to understand for people reading this, in real case scenarios we didn't use random variable like bike.etc. remember we are using terraform to automate the cloud infrastructure 
 
 
-###### DataSources
+##### DataSources
 Data source is used to alow terraform to use the information outside of terraform, means it used information may be another configuration file or modified functions.
 
-###### Environment variable
+##### Environment variable
 
 Used to export our values and able to overide the values in the .tf file before execute 'terraform plan'. It is more secure way to pass the secret information as variables rather than exposing it in our configuration file
 
 How to do it eg TV_VAR_vpcname=myvpc
 
-###### TFVAR Files
+##### TFVAR Files
 
 Passing variables inside a file, this is possible create a file called terraform.tfvars this file can be in a yaml or json notation.
 
@@ -165,7 +165,7 @@ eg: dev.auto.tfvars
 
 ```
 
-###### LOAD PRECIDENCE
+##### LOAD PRECIDENCE
 
 How your file will be overide the variables
 
