@@ -23,7 +23,14 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - Programming basics, Python Architecture.
         - Python: Variables,Data types
 
-- [ ] Day 3
+- [x] Day 3
+    - Completed Tasks:
+        - Terraform variable Load precidence
+        - Resource Meta Arguments
+        - Conditional Expressions
+        - For Expressions
+        - Version Constraints
+        - Local-exec and remote-exec
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6

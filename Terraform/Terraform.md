@@ -230,3 +230,92 @@ provider "aws" {
 
 ```
 
+##### LOCAL VS REMOTE EXEC
+
+With Terraform the plugins have 2 options to do the job:
+
+-   Local-Exec: From our local machine
+-   Remote-Exec: On the remote instance
+
+One example of local-exec is create a ssh key in our machine.
+
+```
+resource "null_resource" "generate-sshkey" {
+    provisioner "local-exec" {
+        command = "yes y | ssh-keygen -b 4096 -t rsa -C 'terraform-vsphere-kubernetes' -N '' -f ${var.virtual_machine_kubernetes_controller.["private_key"]}"
+    }
+}
+
+```
+
+Another example for local-exec is execute a script for Download Lambda dependencies, and after that, make a zip.
+
+One example for remote-exec is from the key create previously, we can configure on a deployed virtual machine
+
+```
+  provisioner "remote-exec" {
+    inline = [
+      "mv /tmp/authorized_keys /root/.ssh/authorized_keys",
+      "chmod 600 /root/.ssh/authorized_keys",
+    ]
+    connection {
+      type          = "${var.virtual_machine_template.["connection_type"]}"
+    }
+  }
+
+```
+
+##### Terraform State
+
+Stores the current state of the infrastructure which is created by configuration fies,file will be vreated automatically once you hit 'terraform apply'
+
+***file name:terraform.tfstate***
+
+Note: The state file backup will be automatically created and you cannot able to disable the backup. 
+
+#### Terraform Workflow
+
+The workflow will vary in different cases 
+
+Case 1 - Individual 
+
+    - Write: Create a terraform file
+    - Plan: Run the terraform plan
+    - Create: Run the terraform apply and create the resources 
+
+Case 2 - Team
+
+    - Write: Check the project repo and analyse the current state of the file and pull the file to write or modify the changes 
+    - Plan : Run terraform plan and raise the pull request
+    - Create: Once merged the resources will be created 
+
+Case 3 -  Terraform Cloud 
+
+    -   Write: Use Terraform Cloud as your `development` environment (statefiles, variables and secrets on Terrafom Cloud)
+    -   Plan: When a PR is raised, Terraform Plan is run
+    -   Create: Before merging a second plan is run before approval to create
+
+#### Basic Terraform Commands 
+
+##### Terraform init
+
+'terraform init' - intialize the terraform setting inside the project, it basically downloads the necessary providers and settings based on the configuration files
+
+*tip: execute this command then and there while you are working on the project files*
+
+##### Terraform Validate
+ 'terraform validate' - validate the syntax and aruguments in the terraform configuration file 
+
+##### Terraform FMT
+ 'terrafomr fmt' - rewrite your terraform files to the standard format
+
+##### Terraform Plan
+ 'terraform plan' - it was commad that check the current state of already existing remote-state is up to dated, and it basically shows you what gonna change in your cloud resources if you execute the current state of the configuration file, so by seeing this you can able to see what's gonna actually change/create in your environment 
+
+ ##### TERRAFORM APPLY
+
+  `terraform apply` - basically all set lets create a resource. it will create all the resources mentioned in the terraform configuraation file
+
+##### TERRAFORM DESTROY
+
+ `terraform destroy` command is used to destroy the Terraform-managed infrastructure.
