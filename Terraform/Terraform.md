@@ -140,6 +140,42 @@ Note: Above is just an example to understand for people reading this, in real ca
 
 
 ###### DataSources
-Data source is used to alow terraform to use the information outside of terraform, means it used information may be another configuration file or modified y functions.
+Data source is used to alow terraform to use the information outside of terraform, means it used information may be another configuration file or modified functions.
+
+###### Environment variable
+
+Used to export our values and able to overide the values in the .tf file before execute 'terraform plan'. It is more secure way to pass the secret information as variables rather than exposing it in our configuration file
+
+How to do it eg TV_VAR_vpcname=myvpc
+
+###### TFVAR Files
+
+Passing variables inside a file, this is possible create a file called terraform.tfvars this file can be in a yaml or json notation.
+
+Note :  only *terraform.tfvars* file will be autoloaded, if you are using your own naming conversion for multiple tfvar file like *dev.tfvars* *prod.tfvars* these values cannot be auto loaded by terraform. You need to explicitly load via the command line during 'terraform plan'
+
+command to do it ; 'terraform plan -var-file="dev.tfvars"'
+
+##### AUTOLOAD Variables
+
+Similar to terraform.tfvars if you wanna use different file names but you wanna terraform to load that automatically, in such cases you can use *<file_name>.auto.tfvars* (This is the next file that look after terraform.tfvars). 
+
+```
+eg: dev.auto.tfvars
+
+```
+
+###### LOAD PRECIDENCE
+
+How your file will be overide the variables
+
+1. -var flag (This will override the '-var-file')
+1. -var-file (This will override the 'Environment variables')
+1. Environment variables (This will override the values in terraform.tfvars)
+1. terraform.tfvars (This will overide the variables in *.auto.tfvars)
+1. *.auto.tfvars (This will override the variables in the default code)
+1. Default value in the code 
+
+
 
 
