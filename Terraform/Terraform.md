@@ -299,23 +299,23 @@ Case 3 -  Terraform Cloud
 
 ##### Terraform init
 
-'terraform init' - intialize the terraform setting inside the project, it basically downloads the necessary providers and settings based on the configuration files
+`terraform init` - intialize the terraform setting inside the project, it basically downloads the necessary providers and settings based on the configuration files
 
 *tip: execute this command then and there while you are working on the project files*
 
 ##### Terraform Validate
- 'terraform validate' - validate the syntax and aruguments in the terraform configuration file 
+ `terraform validate` - validate the syntax and aruguments in the terraform configuration file 
 
 ##### Terraform FMT
- 'terrafomr fmt' - rewrite your terraform files to the standard format
+ `terrafomr fmt` - rewrite your terraform files to the standard format
 
 ##### Terraform Plan
- 'terraform plan' - it was commad that check the current state of already existing remote-state is up to dated, and it basically shows you what gonna change in your cloud resources if you execute the current state of the configuration file, so by seeing this you can able to see what's gonna actually change/create in your environment 
+ `terraform plan` - it was commad that check the current state of already existing remote-state is up to dated, and it basically shows you what gonna change in your cloud resources if you execute the current state of the configuration file, so by seeing this you can able to see what's gonna actually change/create in your environment 
 
- ##### TERRAFORM APPLY
+ ##### Terraform Apply
 
   `terraform apply` - basically all set lets create a resource. it will create all the resources mentioned in the terraform configuraation file
 
-##### TERRAFORM DESTROY
+##### Terraform Destroy
 
  `terraform destroy` command is used to destroy the Terraform-managed infrastructure.
