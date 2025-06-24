@@ -176,6 +176,57 @@ How your file will be overide the variables
 1. *.auto.tfvars (This will override the variables in the default code)
 1. Default value in the code 
 
+##### Resource Meta Aruguments 
+
+Defines your configuration file behaviour, like saying the terraform to do the things in a way we want 
 
 
+##### Conditional Expressions
+
+It is if,else statement in the terraform, syntax 'condition ? true_val: false_val'
+
+Syntax explanation:
+ - condition refers to what your are going to do (Basically it is the 'if statement')
+ - ? (if statement is true) then it takes the 'true_val'
+ - : refers to a else
+ - if else statement is executed then false_val will be taken
+
+ Note: The return type of if else statement must be same. 
+
+ ##### For Expressions 
+
+ This allows you to iterate over a complex type. It accept input of list,tuple,set,map or an object 
+
+ Syntax : '[for s in var.a : upper(s)]'
+
+ Note : [] -> Returns tuple
+        {} -> Returns Object
+
+##### Version Constraints
+
+The `required_version` setting can be used to constrain which versions of the Terraform CLI can be used with your configuration. If the running version of Terraform doesn't match the constraints specified, Terraform will produce an error and exit without taking any further actions.
+
+```
+terraform {
+  required_version = ">= 0.12"
+}
+
+```
+
+The value for `required_version` is a string containing a comma-separated list of constraints. Each constraint is an operator followed by a version number, such as `> 0.12.0`. The following constraint operators are allowed:
+
+-   [`=`](https://www.terraform.io/docs/configuration/terraform.html#) (or no operator): exact version equality
+-   [`!=`](https://www.terraform.io/docs/configuration/terraform.html#-1): version not equal
+-   [`>`](https://www.terraform.io/docs/configuration/terraform.html#gt-), `>=`, `<`, `<=`: version comparison, where "greater than" is a larger version number
+-   [`~>`](https://www.terraform.io/docs/configuration/terraform.html#gt--1): pessimistic constraint operator, constraining both the oldest and newest version allowed. For example, `~> 0.9` is equivalent to `>= 0.9, < 1.0`, and `~> 0.8.4`, is equivalent to `>= 0.8.4, < 0.9`
+
+We can also specified a provider version requirement
+
+```
+provider "aws" {
+	region = "us-east-1"
+	version = ">= 2.9.0"
+}
+
+```
 
