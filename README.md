@@ -31,7 +31,13 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - For Expressions
         - Version Constraints
         - Local-exec and remote-exec
-- [ ] Day 4
+- [x] Day 4
+    - Completed Tasks:
+        - Debugging in Terraform
+        - Terraform Troubleshooting
+        - Drift behaviour
+        - Private modules 
+        - Started a project with terraform to deploy a statis website
 - [ ] Day 5
 - [ ] Day 6
 - [ ] Day 7
