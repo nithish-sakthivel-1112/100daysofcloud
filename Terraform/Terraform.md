@@ -319,3 +319,41 @@ Case 3 -  Terraform Cloud
 ##### Terraform Destroy
 
  `terraform destroy` command is used to destroy the Terraform-managed infrastructure.
+
+#### Terraform Troubleshooting
+
+There are 4 kinds of error you. might see when you're working with Terraform
+
+1. Language error - your syntax or formati error 
+   Commands to troubleshoot this kind of errors 
+    - `terraform fmt`
+    - `terraform validate`
+    - `terraform version`
+1. Sate error - Expected state od resources is missing.
+   Commands to troubleshoot this kind of errors 
+    - `terraform refresh`
+    - `terraform apply`
+    - `terraform replace`
+1. Core errors - Bug with core library
+   This issue needs to addressed via github issue 
+    - Check the log with `TF_LOG`
+    - Then Report to the Github issue and wait that to be resolved.
+1. Provider Errors -  Providers API doesn't worked or changed.
+   - Check the log with `TF_LOG`
+   - Then Report to the Github issue and wait that to be resolved.
+
+#### Terraform Debugging 
+
+Terraform has details logs which can be see using `TF_LOG`environment variable:
+
+The variables can be used from the below list 
+
+ - TRACE
+ - CORE
+ - DEBUG
+ - INFO
+ - WARN
+ - ERROR 
+ - JSON
+
+You can use where you want to store the logs by setting `TF_LOG_PATH`
