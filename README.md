@@ -38,7 +38,10 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - Drift behaviour
         - Private modules 
         - Started a project with terraform to deploy a statis website
-- [ ] Day 5
+- [x] Day 5
+    - Completed tasks:
+        - Created EC2 instance with SG, and Key pair generation in terraform
+        - Hosted a static website using AWS S3, Cloudfront using terraform
 - [ ] Day 6
 - [ ] Day 7
 - [ ] Day 8
