@@ -42,7 +42,10 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
     - Completed tasks:
         - Created EC2 instance with SG, and Key pair generation in terraform
         - Hosted a static website using AWS S3, Cloudfront using terraform
-- [ ] Day 6
+- [x] Day 6
+    - Completed Tasks 
+        - Create a complete VPC using Terraform
+        - Learn in-depth about modules and why they are used 
 - [ ] Day 7
 - [ ] Day 8
 - [ ] Day 9
