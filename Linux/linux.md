@@ -4,5 +4,5 @@
 ## File structure in Linux
     Linux uses th logical filesystem,At the very top of the filesystem structure is /, often referred to as the root of the filesystem, as if it were an upside-down tree
 
-    ![Linux Filesystem](OIP.webp)
+![Linux Filesystem](linux-fs.png)
     
