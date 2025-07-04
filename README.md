@@ -46,7 +46,12 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
     - Completed Tasks 
         - Create a complete VPC using Terraform
         - Learn in-depth about modules and why they are used 
-- [ ] Day 7
+- [x] Day 7
+    - Completed Tasks
+        - Linux fundamentals 
+        - Linux Filesystem
+        - Package Management 
+        - Creating user and adding user to the groups.
 - [ ] Day 8
 - [ ] Day 9
 - [ ] Day 10
