@@ -79,3 +79,38 @@ Uses a sources list located in `etc/apt/sources.list`
 | `dpkg --remove $package_name` | Removes Debian package |
 | `dpkg --purge $package_name` | Removes dependencies |
 
+
+### Basic Linux commands 
+
+| command | purpose |
+| --- | --- |
+| `cp` | To copy the file |
+| `mv` | To move or rename the file |
+| `cd` | Change the directory |
+| `ls` | List the items in the directory |
+| `pwd` | present working directory |
+| `sudo` | Execute the commands with super user privliges. |
+| `rmdir` | To remove the empty directory |
+| `rm -rf` | To remove the file recursively |
+| `mkdir` | To create a new directory |
+
+### Process management in linux
+
+Process is the running instance of the program
+
+| command | purpose |
+| --- | --- |
+| `ps aux` | To list all the running process |
+| `ps -ef` | Detailed definition of the running process |
+| `top` | Real time view of system process |
+| `pgrep <process name>` | To find a specific process without knowing its PID |
+| `kill` | To terminate the process |
+| `pkill` | To terminate the process using the process name |
+| `killall` | To terminate the all process using the process name |
+| `nice` | Start a process with higher priority |
+| `renice` | Change the priority of the running process |
+| `sudo iotop` | To see the real time I/O proceses |
+
+
+
+
