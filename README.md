@@ -52,7 +52,13 @@ Hey!! This is Nithish, I'm a self taught cloud engineer, trasitioned from Techni
         - Linux Filesystem
         - Package Management 
         - Creating user and adding user to the groups.
-- [ ] Day 8
+- [x] Day 8
+    - Completed Tasks
+        - Linux Process management
+        - Linux Ownership management
+        - How to change the log path when deploying the new software
+        - What is CI/CD means in Devops
+        - Different stages of CICD
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11
