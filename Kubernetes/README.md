@@ -1,6 +1,6 @@
 # Kubernetes 
 
-## History and Evaloution of Application Deployments
+## History and Evolution of Application Deployments
 
 ### Classic Setup
 In the Intital days the companies need to order a physical server and once the server has been arrived they need to setup networking, OS and everything on their own. This classic setup follows the *One Application for One server* approach 
