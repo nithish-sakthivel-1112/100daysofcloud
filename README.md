@@ -65,6 +65,7 @@ Note: This is not end to end Cloud and Devops, it was my knownledge filling up o
     - Completed Tasks
         - GitLab CI/CD
         - Setup the basic pipeline and done some handson
+        - Gitlab Runners
 - [ ] Day 10
 - [ ] Day 11
 - [ ] Day 12
